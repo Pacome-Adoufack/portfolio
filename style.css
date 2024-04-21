@@ -26,6 +26,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 .menu .logo__img {
   height: 50px;
@@ -44,12 +45,12 @@ body {
   margin-right: 50px;
 }
 
-a:hover {
-  color: red;
-}
-
 .menu__wrapper .icon {
   font-size: 20px;
+}
+
+a:hover {
+  color: yellow;
 }
 
 .contain {
@@ -87,15 +88,13 @@ a:hover {
 }
 
 .about-me {
+  height: 100vh;
   animation: moveBackground 50s infinite linear;
   margin: 300px 0px 100px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 .about-me .about-me__title {
-  text-align: center;
+  padding-left: 300px;
   margin-bottom: 20px;
   font-size: 35px;
   font-weight: bolder;
@@ -114,6 +113,8 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
+  width: 600px;
+  margin-left: 50px;
   animation: box 4s infinite;
 }
 .about-me .about-me__card-1 .box {
@@ -137,10 +138,31 @@ a:hover {
   box-shadow: 2px 2px 10px 5px purple;
   object-fit: cover;
   overflow: hidden;
+  margin: auto;
 }
 .about-me .about-me__card-2 .about-me__img {
   width: 100%;
   height: 100%;
+}
+
+.Project h2 {
+  background-image: linear-gradient(30deg, red, purple);
+  color: transparent;
+  background-clip: text;
+  font-size: 35px;
+  text-align: center;
+}
+.Project .Project__img {
+  display: grid;
+}
+.Project .Project__img img {
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 2px 2px 10px 5px purple;
+  border-radius: 20px;
 }
 
 .contact__title {
@@ -176,7 +198,7 @@ a:hover {
 .contact-wrapper .contact-card-1__title {
   font-size: 20px;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .contact-wrapper .contact__text {
   font-size: 20px;
@@ -193,11 +215,19 @@ a:hover {
   width: 300px;
   height: 40px;
   margin: 10px 0px;
-  box-shadow: 2px 2px 10px 2px purple;
 }
-.contact-wrapper textarea {
+
+input,
+textarea {
   box-shadow: 2px 2px 10px 2px purple;
-  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-style: italic;
+  border-radius: 10px;
+}
+
+.contact-card-2__form {
+  margin-bottom: 20px;
 }
 
 footer {
@@ -289,12 +319,21 @@ footer .icon {
     display: none;
   }
   .about-me {
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 50px;
+    position: relative;
   }
   .about-me .about-me__text {
     font-size: 30px;
+  }
+  .about-me .about-me__card-2 {
+    position: absolute;
+    right: 200px;
+    margin-top: -300px;
+    width: 600px;
+    height: 600px;
+  }
+  .Project__img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .contact-wrapper {
     flex-direction: row;

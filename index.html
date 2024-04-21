@@ -51,7 +51,7 @@
     </main>
 
     <section class="about-me">
-      <h3 class="about-me__title">MY SKILLS</h3>
+      <h3 class="about-me__title" id="my-skills">MY SKILLS</h3>
       <div class="about-me__card-1">
         <div class="box-1 box">HTML</div>
         <div class="box-2 box">CSS</div>
@@ -69,9 +69,19 @@
       <div class="about-me__card-2">
         <img
           class="about-me__img"
-          src="./images/AP.-removebg-preview.png"
+          src="./images/pacome.png"
           alt="paco" />
       </div>
+    </section>
+
+    <section class="Project">
+     <h2 class="Project__title">My Project</h2>
+     <div class="Project__img">
+     <div class="Project__img-1"><img src="/images/student-1.jpeg" alt="student"></div>
+     <div class="Project__img-2"><img src="/images/student-2.jpeg" alt="student"></div>
+     <div class="Project__img-3"><img src="/images/student-3.jpeg" alt="student"></div>
+     <div class="Project__img-4"><img src="/images/student-4.jpeg" alt="student"></div>
+    </div>
     </section>
 
     <section class="contact">
@@ -109,16 +119,15 @@
         </div>
 
         <div class="contact-card-2">
-          <form>
+          <form class="contact-card-2__form">
             <input type="text" name="name" placeholder="name" /><br />
             <input type="email" name="email" placeholder="email" /><br />
             <textarea
               name="kommentar"
               id="kommentar"
               cols="50"
-              rows="10"
-              placeholder="füge ein kommentar">
-            </textarea>
+              rows="5"
+              placeholder="füge ein kommentar"></textarea>
           </form>
           <a class="contact-card-2__button" href="#">SEND</a>
         </div>
