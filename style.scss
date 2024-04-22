@@ -14,6 +14,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: black;
+  overflow-x: hidden;
 }
 
 .menu {
@@ -52,7 +53,6 @@ body {
   display: none;
 }
 .contain {
-  height: 100vh;
   color: white;
   text-align: center;
   margin-top: 150px;
@@ -88,12 +88,13 @@ body {
 }
 
 .about-me {
-  height: 100vh;
+  min-height: 600px;
   animation: moveBackground 50s infinite linear;
   margin: 300px 0px 100px 0px;
   display: block;
 
   .about-me__title {
+    margin-top: 200px;
     padding-left: 300px;
     margin-bottom: 20px;
     font-size: 35px;
@@ -106,7 +107,6 @@ body {
   .about-me__text {
     font-size: 20px;
   }
-
   .about-me__card-1 {
     margin-bottom: 50px;
     font-size: 20px;
