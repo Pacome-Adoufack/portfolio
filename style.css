@@ -33,25 +33,22 @@ body {
   width: 50px;
   margin-left: 100px;
 }
-
-.menu-items {
-  display: none;
-}
-
-.menu__wrapper a {
+.menu .menu__wrapper a {
   font-size: 20px;
   text-decoration: none;
   color: white;
   margin-right: 50px;
+  transition: all 0.5s ease-out 0s;
 }
-
-.menu__wrapper .icon {
+.menu .menu__wrapper .icon {
   font-size: 20px;
 }
+.menu .menu__wrapper a:hover {
+  border-bottom: 5px solid red;
+}
 
-a:hover {
-  color: yellow;
-  animation-delay: 1s;
+.menu-items {
+  display: none;
 }
 
 .contain {
@@ -155,6 +152,9 @@ a:hover {
 }
 .Project .Project__img {
   display: grid;
+  transition: all 3s ease-in-out;
+  animation: project-animation 5s ease infinite;
+  margin-top: 120px;
 }
 .Project .Project__img img {
   width: 500px;
@@ -212,6 +212,9 @@ a:hover {
   font-size: 30px;
   margin: 20px;
 }
+.contact-wrapper .icon:hover {
+  color: red;
+}
 .contact-wrapper input {
   width: 300px;
   height: 40px;
@@ -246,6 +249,9 @@ footer {
 footer .icon {
   font-size: 20px;
   margin: 5px;
+}
+footer .icon:hover {
+  color: red;
 }
 
 @keyframes juniordevelopper {
@@ -304,6 +310,17 @@ footer .icon {
   }
   100% {
     transform: translateX(10px);
+  }
+}
+@keyframes project-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @media (max-width: 768px) {
