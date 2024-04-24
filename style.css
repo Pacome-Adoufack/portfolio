@@ -1,3 +1,92 @@
+@keyframes juniordevelopper {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+}
+@keyframes hand-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes box {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes project-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  padding: 0px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .icon {
+  font-size: 20px;
+  margin: 5px;
+}
+footer .icon:hover {
+  color: red;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -115,6 +204,7 @@ body {
   width: 600px;
   margin-left: 50px;
   animation: box 4s infinite;
+  margin-bottom: 100px;
 }
 .about-me .about-me__card-1 .box {
   background-image: linear-gradient(30deg, red, purple);
@@ -144,20 +234,19 @@ body {
   height: 100%;
 }
 
-.Project h2 {
+.project h2 {
   background-image: linear-gradient(30deg, red, purple);
   color: transparent;
   background-clip: text;
   font-size: 35px;
   text-align: center;
 }
-.Project .Project__img {
+.project .project__wrapper {
   display: grid;
   transition: all 3s ease-in-out;
-  animation: project-animation 5s ease infinite;
-  margin-top: 120px;
+  margin-top: 20px;
 }
-.Project .Project__img img {
+.project .project__wrapper img {
   width: 500px;
   height: 500px;
   display: block;
@@ -179,7 +268,7 @@ body {
 }
 
 .contact {
-  height: 100vh;
+  min-height: 100vh;
 }
 .contact .contact-card-2__button {
   text-decoration: none;
@@ -235,101 +324,6 @@ textarea {
   margin-bottom: 20px;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  height: 80px;
-  padding: 0px 20px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer .icon {
-  font-size: 20px;
-  margin: 5px;
-}
-footer .icon:hover {
-  color: red;
-}
-
-@keyframes juniordevelopper {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-}
-@keyframes hand-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes box {
-  0% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateY(50px);
-  }
-  100% {
-    transform: translateX(10px);
-  }
-}
-@keyframes project-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@media (max-width: 768px) {
-  .menu__icon--link .icon {
-    font-size: 50px;
-    width: 100px;
-  }
-}
 @media (min-width: 768px) {
   .menu-items {
     display: block;
@@ -350,9 +344,14 @@ footer .icon:hover {
     width: 600px;
     height: 600px;
   }
-  .Project__img {
+  .project__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 100px;
+    animation: project-animation 5s ease infinite;
+  }
+  .project__title {
+    margin-top: 100px !important;
   }
   .contact-wrapper {
     flex-direction: row;

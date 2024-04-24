@@ -1,9 +1,11 @@
+@import "keyframes.scss";
+@import "footer.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-image: url("./images/vraisky.jpeg");
   animation: moveBackground 50s infinite linear;
@@ -16,7 +18,6 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
-
 .menu {
   display: flex;
   justify-content: space-between;
@@ -48,7 +49,6 @@ body {
     border-bottom: 5px solid red;
   }
 }
-
 .menu-items {
   display: none;
 }
@@ -86,7 +86,6 @@ body {
     height: 500px;
   }
 }
-
 .about-me {
   min-height: 600px;
   animation: moveBackground 50s infinite linear;
@@ -117,6 +116,7 @@ body {
     width: 600px;
     margin-left: 50px;
     animation: box 4s infinite;
+    margin-bottom: 100px;
 
     .box {
       background-image: linear-gradient(30deg, red, purple);
@@ -127,7 +127,6 @@ body {
       border-radius: 10px;
       box-shadow: 2px 2px 5px 5px purple;
     }
-
     .name {
       background-image: linear-gradient(30deg, red, purple);
       color: transparent;
@@ -149,7 +148,7 @@ body {
     }
   }
 }
-.Project {
+.project {
   h2 {
     background-image: linear-gradient(30deg, red, purple);
     color: transparent;
@@ -157,11 +156,10 @@ body {
     font-size: 35px;
     text-align: center;
   }
-  .Project__img {
+  .project__wrapper {
     display: grid;
     transition: all 3s ease-in-out;
-    animation: project-animation 5s ease infinite;
-    margin-top: 120px;
+    margin-top: 20px;
 
     img {
       width: 500px;
@@ -185,7 +183,7 @@ body {
   background-clip: text;
 }
 .contact {
-  height: 100vh;
+  min-height: 100vh;
 
   .contact-card-2__button {
     text-decoration: none;
@@ -241,105 +239,6 @@ textarea {
   margin-bottom: 20px;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  height: 80px;
-  padding: 0px 20px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .icon {
-    font-size: 20px;
-    margin: 5px;
-  }
-  .icon:hover {
-    color: red;
-  }
-}
-
-@keyframes juniordevelopper {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-}
-@keyframes hand-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes box {
-  0% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateY(50px);
-  }
-  100% {
-    transform: translateX(10px);
-  }
-}
-@keyframes project-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@media (max-width: 768px) {
-  .menu__icon--link .icon {
-    font-size: 50px;
-    width: 100px;
-  }
-}
-
 @media (min-width: 768px) {
   .menu-items {
     display: block;
@@ -361,14 +260,21 @@ footer {
       height: 600px;
     }
   }
-  .Project__img {
+  .project__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 100px;
+    animation: project-animation 5s ease infinite;
+
+  }
+  .project__title{
+    margin-top: 100px !important;
   }
   .contact-wrapper {
     flex-direction: row;
     justify-content: space-evenly;
   }
+  
   footer {
     font-size: 30px;
 
