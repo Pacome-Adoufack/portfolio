@@ -11,7 +11,7 @@ body {
   animation: moveBackground 50s infinite linear;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -43,7 +43,7 @@ body {
     transition: all 0.5s ease-out 0s;
   }
   .menu__wrapper .icon {
-    font-size: 20px;
+    font-size: 50px;
   }
   .menu__wrapper a:hover {
     border-bottom: 5px solid red;
@@ -82,8 +82,9 @@ body {
   }
   .contain__cards--img {
     margin-top: 50px;
-    width: 500px;
+    width: 100%;
     height: 500px;
+    object-fit: cover;
   }
 }
 .about-me {
@@ -110,12 +111,9 @@ body {
     margin-bottom: 50px;
     font-size: 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-    width: 600px;
+    grid-template-columns: repeat(3, 200px);
     margin-left: 50px;
-    animation: box 4s infinite;
+    gap: 20px;
     margin-bottom: 100px;
 
     .box {
@@ -157,7 +155,6 @@ body {
     text-align: center;
   }
   .project__wrapper {
-    display: grid;
     transition: all 3s ease-in-out;
     margin-top: 20px;
 
@@ -184,6 +181,7 @@ body {
 }
 .contact {
   min-height: 100vh;
+  padding-bottom: 100px;
 
   .contact-card-2__button {
     text-decoration: none;
@@ -222,7 +220,7 @@ body {
     color: red;
   }
   input {
-    width: 300px;
+    width: 100%;
     height: 40px;
     margin: 10px 0px;
   }
@@ -239,23 +237,39 @@ textarea {
   margin-bottom: 20px;
 }
 
-@media (min-width:768px) {
-  .menu-items {
-    display: block;
+@media (min-width: 768px){
+  .menu__wrapper {
+    .menu-items {
+      display: block;
+    }
+    .menu__icon--link {
+      display: none;
+    }
+    .menu-items .icon {
+      font-size: 20px;
+    }
   }
-  .menu__icon--link {
-    display: none;
+  .contain{
+    .contain__cards--img{
+      width: 500px;
+    }
   }
+  
+
   .about-me {
     position: relative;
 
     .about-me__text {
       font-size: 30px;
     }
+    .about-me__card-1 {
+      width: 600px;
+      animation: box 4s infinite;
+    }
     .about-me__card-2 {
       position: absolute;
       right: 200px;
-      margin-top: -300px;
+      margin-top: -500px;
       width: 600px;
       height: 600px;
     }
@@ -265,16 +279,16 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
     margin: 100px;
     animation: project-animation 5s ease infinite;
-
-  }
-  .project__title{
-    margin-top: 100px !important;
   }
   .contact-wrapper {
     flex-direction: row;
     justify-content: space-evenly;
+
+    input {
+      width: 300px;
+    }
   }
-  
+
   footer {
     font-size: 30px;
 
