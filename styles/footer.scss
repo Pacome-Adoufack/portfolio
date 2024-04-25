@@ -1,20 +1,23 @@
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    height: 80px;
-    padding: 0px 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    .icon {
-      font-size: 20px;
-      margin: 5px;
-    }
-    .icon:hover {
-      color: red;
-    }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  padding: 0px 10px 0px 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icon {
+    font-size: 12px;
+    margin: 5px;
   }
+  .icon:hover {
+    color: red;
+  }
+  p {
+    font-size: 15px;
+  }
+}

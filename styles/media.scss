@@ -1,0 +1,87 @@
+@media (min-width: 768px) {
+  .menu {
+    .menu__icon--link .icon {
+      display: none;
+    }
+    .menu-items {
+      display: block;
+    }
+    .menu__wrapper a {
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+      margin-right: 50px;
+    }
+    .menu__wrapper .icon {
+      font-size: 20px;
+    }
+    .menu__wrapper a:hover {
+      border-bottom: 5px solid red;
+    }
+  }
+  .contain {
+    font-size: 40px;
+    
+    .contain__cards--img {
+      width: 500px;
+    }
+  }
+  .about-me {
+    position: relative;
+
+    .about-me__text {
+      font-size: 30px;
+    }
+    .about-me__card-1 {
+      width: 600px;
+      animation: box 4s infinite;
+      margin-left: 100px;
+    }
+    .about-me__card-2 {
+      position: absolute;
+      right: 200px;
+      margin-top: -600px;
+      width: 500px;
+      height: 600px;
+    }
+    .about-me__title {
+      margin-left: -800px;
+    }
+  }
+  .project {
+    height: 100vh;
+
+    .project__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      animation: project-animation 5s ease infinite;
+      width: 800px;
+      height: 200px;
+      margin-bottom: 220px;
+      margin-left: 100px;
+    }
+  }
+  .contact {
+    margin-top: 100px;
+
+    .contact-wrapper {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      input {
+        width: 300px;
+      }
+    }
+  }
+  footer {
+    font-size: 30px;
+
+    .icon {
+      font-size: 30px;
+      margin: 10px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}

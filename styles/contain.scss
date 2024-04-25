@@ -1,0 +1,35 @@
+.contain {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 25px;
+  
+    .hand {
+      animation-duration: 2.1s;
+      animation-iteration-count: infinite;
+      animation-name: hand-animation;
+      display: inline-block;
+      z-index: -1;
+    }
+    .name,
+    .contain__text {
+      background-image: linear-gradient(30deg, red, purple);
+      color: transparent;
+      background-clip: text;
+    }
+    .contain__text {
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0 auto;
+      margin-top: 50px;
+      font-size: 40px;
+      animation: juniordevelopper 3s steps(50) forwards infinite,
+        blink-caret 0.2s step-end infinite alternate;
+    }
+    .contain__cards--img {
+      margin-top: 50px;
+      width: 90%;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
